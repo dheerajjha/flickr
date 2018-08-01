@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B333B847211057D900D34AD7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B333B846211057D900D34AD7 /* Constants.swift */; };
+		B333B84921108E2B00D34AD7 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B333B84821108E2B00D34AD7 /* JSONParser.swift */; };
 		B3F7875E21085D5C00EB9447 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F7875D21085D5C00EB9447 /* AppDelegate.swift */; };
 		B3F7876521085D5C00EB9447 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F7876321085D5C00EB9447 /* Main.storyboard */; };
 		B3F7876721085D5D00EB9447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F7876621085D5D00EB9447 /* Assets.xcassets */; };
 		B3F7876A21085D5D00EB9447 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F7876821085D5D00EB9447 /* LaunchScreen.storyboard */; };
 		B3F7877D2108827200EB9447 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F7877C2108827200EB9447 /* PhotoModel.swift */; };
 		B3F787A62109A40400EB9447 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F787A52109A40400EB9447 /* MainViewController.swift */; };
-		B3F787AA2109AD3400EB9447 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F787A92109AD3400EB9447 /* CollectionViewCell.swift */; };
-		B3F787AC2109AE5A00EB9447 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F787AB2109AE5A00EB9447 /* TabController.swift */; };
-		B3F787AE2109AE6900EB9447 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F787AD2109AE6900EB9447 /* CollectionViewController.swift */; };
+		B3F787AA2109AD3400EB9447 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F787A92109AD3400EB9447 /* CustomCollectionViewCell.swift */; };
+		B3F787AC2109AE5A00EB9447 /* MainViewController+TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F787AB2109AE5A00EB9447 /* MainViewController+TabController.swift */; };
+		B3F787AE2109AE6900EB9447 /* MainViewController+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F787AD2109AE6900EB9447 /* MainViewController+CollectionViewController.swift */; };
+		B3F787B02109C2A600EB9447 /* MainViewController+SearchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F787AF2109C2A600EB9447 /* MainViewController+SearchBarController.swift */; };
+		B3F787DB210B00B200EB9447 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F787DA210B00B200EB9447 /* DownloadManager.swift */; };
+		B3F787DD210B00C100EB9447 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F787DC210B00C100EB9447 /* Manager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B333B846211057D900D34AD7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B333B84821108E2B00D34AD7 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		B3F7875A21085D5C00EB9447 /* Flickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F7875D21085D5C00EB9447 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3F7876421085D5C00EB9447 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -27,9 +34,12 @@
 		B3F7876B21085D5D00EB9447 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3F7877C2108827200EB9447 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		B3F787A52109A40400EB9447 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		B3F787A92109AD3400EB9447 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		B3F787AB2109AE5A00EB9447 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
-		B3F787AD2109AE6900EB9447 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		B3F787A92109AD3400EB9447 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		B3F787AB2109AE5A00EB9447 /* MainViewController+TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TabController.swift"; sourceTree = "<group>"; };
+		B3F787AD2109AE6900EB9447 /* MainViewController+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+CollectionViewController.swift"; sourceTree = "<group>"; };
+		B3F787AF2109C2A600EB9447 /* MainViewController+SearchBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+SearchBarController.swift"; sourceTree = "<group>"; };
+		B3F787DA210B00B200EB9447 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		B3F787DC210B00C100EB9447 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B333B845211057C500D34AD7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B333B846211057D900D34AD7 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		B3F7875121085D5C00EB9447 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +85,7 @@
 				B3F787722108734700EB9447 /* Models */,
 				B3F787712108734700EB9447 /* UI */,
 				B3F787742108734800EB9447 /* Utilities */,
+				B333B845211057C500D34AD7 /* Constants */,
 				B3F7876621085D5D00EB9447 /* Assets.xcassets */,
 				B3F7875D21085D5C00EB9447 /* AppDelegate.swift */,
 				B3F7876B21085D5D00EB9447 /* Info.plist */,
@@ -95,9 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				B3F787A52109A40400EB9447 /* MainViewController.swift */,
-				B3F787A92109AD3400EB9447 /* CollectionViewCell.swift */,
-				B3F787AB2109AE5A00EB9447 /* TabController.swift */,
-				B3F787AD2109AE6900EB9447 /* CollectionViewController.swift */,
+				B3F787A92109AD3400EB9447 /* CustomCollectionViewCell.swift */,
+				B3F787AB2109AE5A00EB9447 /* MainViewController+TabController.swift */,
+				B3F787AD2109AE6900EB9447 /* MainViewController+CollectionViewController.swift */,
+				B3F787AF2109C2A600EB9447 /* MainViewController+SearchBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -105,6 +125,7 @@
 		B3F787742108734800EB9447 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B333B84821108E2B00D34AD7 /* JSONParser.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -112,6 +133,8 @@
 		B3F7877B210881EE00EB9447 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B3F787DA210B00B200EB9447 /* DownloadManager.swift */,
+				B3F787DC210B00C100EB9447 /* Manager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -187,11 +210,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F787AE2109AE6900EB9447 /* CollectionViewController.swift in Sources */,
-				B3F787AC2109AE5A00EB9447 /* TabController.swift in Sources */,
+				B3F787AE2109AE6900EB9447 /* MainViewController+CollectionViewController.swift in Sources */,
+				B3F787AC2109AE5A00EB9447 /* MainViewController+TabController.swift in Sources */,
+				B3F787DB210B00B200EB9447 /* DownloadManager.swift in Sources */,
+				B333B84921108E2B00D34AD7 /* JSONParser.swift in Sources */,
 				B3F7877D2108827200EB9447 /* PhotoModel.swift in Sources */,
 				B3F7875E21085D5C00EB9447 /* AppDelegate.swift in Sources */,
-				B3F787AA2109AD3400EB9447 /* CollectionViewCell.swift in Sources */,
+				B333B847211057D900D34AD7 /* Constants.swift in Sources */,
+				B3F787B02109C2A600EB9447 /* MainViewController+SearchBarController.swift in Sources */,
+				B3F787AA2109AD3400EB9447 /* CustomCollectionViewCell.swift in Sources */,
+				B3F787DD210B00C100EB9447 /* Manager.swift in Sources */,
 				B3F787A62109A40400EB9447 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

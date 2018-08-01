@@ -8,17 +8,40 @@
 
 import UIKit
 
+typealias Completion = (_ response: Any,_ error: Error?) -> Void
+
 class MainViewController: UIViewController {
+    
+    var name: String = "MainViewController"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        DispatchQueue.global(qos: .background).async {
+            
+            self.asynHeaveyTask {[weak self](response, error) in
+                guard let theSelf = self else { return }
+                theSelf.name = "xyz"
+                print("heavy oper complt")
+                
+            }
+        }
+        
+        
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func asynHeaveyTask(completion: Completion) {
+        
+        sleep(10)
+        
+        completion("Done", nil)
     }
     
 

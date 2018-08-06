@@ -11,9 +11,23 @@ import UIKit
 extension MainViewController: UISearchBarDelegate{
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        var searchText: String? = searchBar.text
         
+        let activityIndicator = UIActivityIndicatorView(style: .gray)
+        searchBar.addSubview(activityIndicator)
+        activityIndicator.frame = searchBar.bounds
+        activityIndicator.startAnimating()
         
-        
+        searchText = searchBar.text!
+        print("search text entered is \(searchText)")
+        APIDownloader.searchTextPhotosObjectArray(textToSearch: searchText, pageNo: pageNo){
+            (data, error) in
+            
+            self.resultsArray.removeAll()
+            self.resultsArray = data.photos.photo
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+                activityIndicator.stopAnimating()
+            }
+        }
     }
 }

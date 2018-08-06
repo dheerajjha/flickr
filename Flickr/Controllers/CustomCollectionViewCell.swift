@@ -11,17 +11,40 @@ import UIKit
 class CustomCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    var photoObject: photo?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("New cell was instantiated")
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        imageView.image = UIImage(named: "first")
-        print("resued cell")
+        photoObject = nil
+        imageView.image = #imageLiteral(resourceName: "first")
     }
+    
+    func configureCell( photoObject: photo) {
+        var mutatingObj = photoObject
+        self.photoObject = mutatingObj
+        self.imageView.image = #imageLiteral(resourceName: "first")
+        let aimURL = mutatingObj.getDownloadURL()
+        if CacheManager.getFromCache(urlString: aimURL) == nil {
+            ImageDownloader.getIndividualPhotosFromString(url: aimURL){ [weak self] image, error, returnedDownloadURL in
+                guard let strongSelf = self else { return }
+                DispatchQueue.main.async {
+                    if strongSelf.photoObject?.getDownloadURL() == returnedDownloadURL{
+                        strongSelf.imageView.image = image
+                        CacheManager.addToCache(urlString: aimURL, imageObject: image)
+                    }
+                }
+            }
+        }
+        else{
+            self.imageView.image = CacheManager.getFromCache(urlString: mutatingObj.getDownloadURL())
+        }
+    }
+    
     
 }
 

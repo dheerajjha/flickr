@@ -12,23 +12,19 @@ typealias Completion = (_ response: Any,_ error: Error?) -> Void
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView!
+//    
+//    var cacheImage = [UIImage?](repeating: nil, count: 100)
+    var pageNo = 1
+    var searchText:String = ""
     var name: String = "MainViewController"
-
+    var resultsArray: [photo] = [photo]()
+    var itemsPerRow: CGFloat = 1
+    var sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        DispatchQueue.global(qos: .background).async {
-            
-            self.asynHeaveyTask {[weak self](response, error) in
-                guard let theSelf = self else { return }
-                theSelf.name = "xyz"
-                print("heavy oper complt")
-                
-            }
-        }
-        
-        
+ 
     }
     
     
@@ -36,13 +32,5 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func asynHeaveyTask(completion: Completion) {
-        
-        sleep(10)
-        
-        completion("Done", nil)
-    }
-    
 
 }

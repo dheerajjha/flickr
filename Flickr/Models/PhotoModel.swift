@@ -17,6 +17,17 @@ struct photo: Codable{
     let ispublic:   Int
     let isfriend:   Int
     let isfamily:   Int
+    
+    var downloadURL: String? = nil
+    public mutating func getDownloadURL() -> String {
+        if let imageURL = self.downloadURL {
+            return imageURL
+        } else {
+            let url = StringGenerateUtility.generateIndividualPhotosURL(farm: self.farm, server: self.server, id: self.id, secret: self.secret)
+            downloadURL = url
+            return url
+        }
+    }
 }
 struct photos: Codable{
     let page:   Int
@@ -28,7 +39,5 @@ struct photos: Codable{
 struct photoModel: Codable{
     let photos: photos
     let stat:   String
-    func parseJSONToPhotoModel(jsonObject: String){
-        
-    }
+    
 }

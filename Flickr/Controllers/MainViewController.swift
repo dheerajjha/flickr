@@ -13,8 +13,10 @@ typealias Completion = (_ response: Any,_ error: Error?) -> Void
 class MainViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-//    
-//    var cacheImage = [UIImage?](repeating: nil, count: 100)
+    
+    @IBOutlet weak var historyButton: UIButton!
+    @IBOutlet weak var searchBar: UISearchBar!
+    //    var cacheImage = [UIImage?](repeating: nil, count: 100)
     var pageNo = 1
     var searchText:String = ""
     var name: String = "MainViewController"
@@ -24,7 +26,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
     }
     
     

@@ -15,7 +15,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if resultsArray.count - 1 == indexPath.row {
+        if resultsArray.count - 11 == indexPath.row {
             pageNo = pageNo + 1
             APIDownloader.searchTextPhotosObjectArray(textToSearch: searchText, pageNo: pageNo){
                 (data, error) in

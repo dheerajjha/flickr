@@ -10,7 +10,7 @@
 //let owner:String?
 //let secret:String?
 //let server:String?
-//let farm:String?
+//let farm:String?dis
 //let title:String?
 //let isPublic:Bool = false
 //let isFriend:Bool = false

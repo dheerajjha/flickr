@@ -9,7 +9,7 @@
 import Foundation
 public class Constants{
     //private
-    static private let apiKey:String = "f2ddfcba0e5f88c2568d96dcccd09602"
+    static let apiKey:String = "f2ddfcba0e5f88c2568d96dcccd09602"
     static let countOfPhotosToCache:Int = 200
     enum format: String {
         case json

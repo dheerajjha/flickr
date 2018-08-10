@@ -39,5 +39,21 @@ struct photos: Codable{
 struct photoModel: Codable{
     let photos: photos
     let stat:   String
-    
 }
+////Understand Generics in swift
+//struct Page<T: Codable>: Codable{
+//    let page:   Int
+//    let pages:  Int
+//    let perpage:Int
+//    let total:  String
+//    var photo:  [T]
+//}
+//
+//
+//struct photoModel: Codable{
+//    let photos: Page<photo>
+//    let stat:   String
+//
+//}
+//
+//

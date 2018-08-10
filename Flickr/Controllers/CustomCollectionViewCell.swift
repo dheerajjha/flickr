@@ -29,20 +29,15 @@ class CustomCollectionViewCell: UICollectionViewCell {
         self.photoObject = mutatingObj
         self.imageView.image = #imageLiteral(resourceName: "first")
         let aimURL = mutatingObj.getDownloadURL()
-        if CacheManager.getFromCache(urlString: aimURL) == nil {
             ImageDownloader.getIndividualPhotosFromString(url: aimURL){ [weak self] image, error, returnedDownloadURL in
                 guard let strongSelf = self else { return }
                 DispatchQueue.main.async {
                     if strongSelf.photoObject?.getDownloadURL() == returnedDownloadURL{
                         strongSelf.imageView.image = image
-                        CacheManager.addToCache(urlString: aimURL, imageObject: image)
+                        
                     }
                 }
             }
-        }
-        else{
-            self.imageView.image = CacheManager.getFromCache(urlString: mutatingObj.getDownloadURL())
-        }
     }
     
     
